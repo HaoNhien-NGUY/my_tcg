@@ -22,6 +22,7 @@ describe('A deck', function() {
 
     it('shuffles', function() {
         expect(testDeck.shuffle()).toBe(true);
+        expect(testDeck.cards).not.toEqual(cards);
     });
 
     it('insert a card in a given position', function() {
