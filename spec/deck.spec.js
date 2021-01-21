@@ -12,12 +12,12 @@ describe('A deck', function() {
     })
 
     beforeEach(function () {
-        testDeck.config.cards = [...cards];
+        testDeck.cards = [...cards];
     });
 
     it('creates', function() {
-        expect(testDeck.config.cards).toBeDefined();
-        expect(Array.isArray(testDeck.config.cards)).toBe(true);
+        expect(testDeck.cards).toBeDefined();
+        expect(Array.isArray(testDeck.cards)).toBe(true);
     });
 
     it('shuffles', function() {
@@ -29,18 +29,18 @@ describe('A deck', function() {
         const pos = 4;
 
         expect(testDeck.insertAt(card, pos)).toBe(true);
-        expect(testDeck.config.cards[pos]).toBe(card);
+        expect(testDeck.cards[pos]).toBe(card);
     });
 
     it('draws', function() {
-        const firstCard = testDeck.config.cards[0];
+        const firstCard = testDeck.cards[0];
 
         expect(testDeck.draw()).toBe(firstCard);
-        expect(testDeck.config.cards).not.toContain(firstCard);
+        expect(testDeck.cards).not.toContain(firstCard);
     });
 
     it('gets the card count', function () {
-        const deckLength = testDeck.config.cards.length;
+        const deckLength = testDeck.cards.length;
 
         expect(testDeck.getCardsCount()).toBe(deckLength);
     })
