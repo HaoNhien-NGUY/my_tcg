@@ -12,9 +12,9 @@ export default class Deck {
             [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];
         }
 
-        return unshuffledCards.toString() !== this.cards.toString();
+        return JSON.stringify(unshuffledCards) !== JSON.stringify(this.cards);
     }
-    
+
     insertAt (card, pos = this.cards.length) {
         this.cards.splice(pos, 0, card);
 

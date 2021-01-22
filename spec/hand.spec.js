@@ -70,9 +70,9 @@ describe('A hand', function() {
 
     it('get all cards', function() {
         expect(testHand.getAllCards()).toEqual(testHand.cards);
-    })
+    });
 
     it('get cards count', function() {
         expect(testHand.getCardsCount()).toBe(testHand.cards.length);
-    })
+    });
 });
